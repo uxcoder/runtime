@@ -1,0 +1,16 @@
+# PhpStorm directories
+######################
+/.idea/
+
+# configs
+#########
+
+
+# automatically generated other files
+#####################################
+.DS_Store
+Thumbs.db
+
+# automatically generated php-files
+###################################
+app/lib/smarty/templates_c
