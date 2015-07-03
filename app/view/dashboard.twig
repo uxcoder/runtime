@@ -2,22 +2,13 @@
     <div class="row">
         <div class="u-full-width">
             <h4>Dashboard</h4>
-            {if $authorized}
-                <p>
-                    Hi, {$user.firstname} {$user.lastname}
-                </p>
-            {/if}
+            {% if authorized %}
+            <p>
+                Hi, {{user.firstname}} {{user.lastname}}
+            </p>
+            {% endif %}
             <p>Here is your content.</p>
-            {*<p>*}
-                {*<h5>Registered users</h5>*}
-                {*<ul>*}
-                {*{foreach $users as $user}*}
-                    {*<li>{$user.firstname} {$user.lastname}</li>*}
-                {*{/foreach}*}
-                {*</ul>*}
-            {*<hr>*}
-            {*</p>*}
-
+            <hr>
             <h6 class="chart-title">Heart Rate</h6>
             <canvas id="myChart" width="400" height="400"></canvas>
         </div>
@@ -27,7 +18,7 @@
 
 <script src="public/js/Chart.min.js"></script>
 <script>
-    var heart_rate = {$userData|@json_encode};
+    var heart_rate = {{userData|json_encode|raw}};
     var d = [];
     heart_rate.forEach(function(item) {
         d.push(item.value);

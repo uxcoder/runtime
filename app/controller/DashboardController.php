@@ -23,7 +23,7 @@ class DashboardController extends AppController
         ];
 //            Session::init();
 //            print_r($_SESSION);
-        $this->view->render('dashboard.tpl', $var);
+        $this->view->render('dashboard.twig', $var);
     }
 
 }

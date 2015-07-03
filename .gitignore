@@ -13,4 +13,4 @@ Thumbs.db
 
 # automatically generated php-files
 ###################################
-app/lib/smarty/templates_c
+app/lib/Twig

@@ -23,7 +23,7 @@ class LoginController extends AppController
                 if ($var['authorized']) {
                     header('location: dashboard');
                 }
-                $this->view->render('login.tpl', $var);
+                $this->view->render('login.twig', $var);
         }
 
 }

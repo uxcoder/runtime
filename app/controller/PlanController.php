@@ -9,7 +9,7 @@ class PlanController extends AppController
 
         public function run()
         {
-                $this->view->render('plan.tpl', NULL);
+                $this->view->render('plan.twig', NULL);
         }
 
 }

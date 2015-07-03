@@ -45,7 +45,7 @@ class AdminController extends AppController
             $var = [
                 'message' => $form['message'],
             ];
-            $this->view->render('admin.tpl', $var);
+            $this->view->render('admin.twig', $var);
         }
 
 }

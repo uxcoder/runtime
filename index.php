@@ -2,7 +2,10 @@
 
 require_once 'app/config/path.php';
 require_once 'app/config/database.php';
-require_once PATH_ROOT . '/lib/smarty/libs/Smarty.class.php';
+//require_once 'app/core/smarty/libs/Smarty.class.php';
+//require_once '';
+require_once 'app/lib/Twig/Autoloader.php';
+Twig_Autoloader::register();
 
 function autoload($className)
 {
