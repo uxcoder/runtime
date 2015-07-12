@@ -19,6 +19,11 @@ class AppView
         if ($var === null) {
             $var = [];
         }
+//        Session::init();
+//            $authorized = Session::get('authorized');
+//            $var['authorized'] = $authorized;
+//            $var['user'] = Session::get('user');
+//        print_r('hi!');
         $header = $this->twig->render('header.twig', $var);
         $footer = $this->twig->render('footer.twig', $var);
         $content = $this->twig->render($template, $var);
